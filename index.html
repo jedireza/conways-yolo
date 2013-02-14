@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Conway's YOLO</title>
+    <script type="text/javascript" src="vendor/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="./index.html">Conway's YOLO Gen: <span class="generation">0</span></a>
+          <ul class="nav pull-right">
+            <li><a href="#restart" class="ctrl-restart"><i class="icon-refresh icon-white"></i> Restart</a></li>
+            <li><a href="#next" class="ctrl-next"><i class="icon-forward icon-white"></i> Next</a></li>
+            <li><a href="#play" class="ctrl-play"><i class="icon-play icon-white"></i> Play</a></li>
+            <li><a href="#stop" class="ctrl-stop"><i class="icon-stop icon-white"></i> Stop</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="span7">
+          <canvas id="board" width="512" height="512">
+            <p>Really!? Get a browser with some character.</p>
+          </canvas>
+        </div>
+        <div class="span5">
+          <div class="well">
+            It's a work in progress.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>
