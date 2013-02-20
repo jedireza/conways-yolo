@@ -1,40 +1,85 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Conway's YOLO</title>
+    <title>Conway's You Only Live Once</title>
     <script type="text/javascript" src="vendor/jquery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css' />
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="./index.html">Conway's YOLO Gen: <span class="generation">0</span></a>
-          <ul class="nav pull-right">
-            <li><a href="#restart" class="ctrl-restart"><i class="icon-refresh icon-white"></i> Restart</a></li>
-            <li><a href="#next" class="ctrl-next"><i class="icon-forward icon-white"></i> Next</a></li>
-            <li><a href="#play" class="ctrl-play"><i class="icon-play icon-white"></i> Play</a></li>
-            <li><a href="#stop" class="ctrl-stop"><i class="icon-stop icon-white"></i> Stop</a></li>
-          </ul>
+    <div class="row-fluid">
+      <!--left-column-->
+      <div class="span4 left">
+          <h1>Conway's</h1>
+          <h2>You Only Live Once</h2>
+          <div class="btn-align">
+            <div class="btn-group">
+              <button class="btn btn-large btn-inverse btn-restart"><i class="icon-refresh icon-white"></i></button>
+              <button class="btn btn-large btn-inverse btn-next"><i class="icon-forward icon-white"></i></button>
+              <button class="btn btn-large btn-inverse btn-play"><i class="icon-play icon-white"></i></button>
+              <button class="btn btn-large btn-inverse btn-stop"><i class="icon-stop icon-white"></i></button>
+              <button class="btn btn-large btn-inverse btn-trash"><i class="icon-trash icon-white"></i></button>
+            </div>
+          </div>
+          <h3>
+            Generation: 
+            <span class="generation">0</span>
+          </h3>
+          
+          <div class="footer">
+            <hr/>
+            <p></p>
+            <p>Made using the force by <a target="_blank" href="https://twitter.com/jedireza">@jedireza</a></p>
+            <p>See the source code on <a target="_blank" href="https://github.com/jedireza/conways-yolo/">GitHub</a></p>
+            <p>Learn about <a target="_blank" href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a></p>
+            <p>Patterns by subtlepatterns.com</p>
+          </div>
+      </div>
+      
+      <!--right-column-->
+      <div class="span8 right">
+        <div class="board-container">
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <button class="btn btn-preset"><i class="icon-picture"></i> <span class="preset-selected">Presets</span></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li class="nav-header">Presets</li>
+                <li><a href="#" data-name="Criss-Cross" data-preset="seed-000.png">0) Criss-Cross</a></li>
+                <li><a href="#" data-name="Lena" data-preset="seed-001.png">1) Lena</a></li>
+                <li><a href="#" data-name="Lena?" data-preset="seed-002.png">2) Lena?</a></li>
+                <li><a href="#" data-name="Origami" data-preset="seed-003.png">3) Origami</a></li>
+              </ul>
+            </div>
+            <div class="btn-group pull-right">
+              <button class="btn btn-tool"><i class="icon-pencil"></i> <span class="tool-selected">Pencil</span></button>
+              <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li class="nav-header">Basic</li>
+                <li><a href="#">Pencil</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Shapes</li>
+                <li class="disabled"><a href="#">coming soon</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="canvas-container">
+            <canvas id="board" width="512" height="512"><p>You need a browser that supports canvas.</p></canvas>
+          </div>
+          
+          <span class="badge badge-inverse pull-right">
+            <i class="icon-map-marker icon-white"></i> <span class="position-x">--</span> x <span class="position-y">--</span>
+          </span>
+          
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
     
-    <div class="container">
-      <div class="row">
-        <div class="span7">
-          <canvas id="board" width="512" height="512">
-            <p>Really!? Get a browser with some character.</p>
-          </canvas>
-        </div>
-        <div class="span5">
-          <div class="well">
-            It's a work in progress.
-          </div>
-        </div>
-      </div>
-    </div>
     
   </body>
   <script type="text/javascript" src="index.js"></script>

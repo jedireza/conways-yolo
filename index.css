@@ -1,6 +1,71 @@
 body {
-  padding-top: 60px;
+  background: #383838;
+  background-image: url('bg-main.png');
 }
-canvas {
+
+/* left */
+.left {
+  height: 100%;
+  padding-left: 2.127659574468085%;
+  position: relative;
+}
+.left a {
+  color: #ccc;
+}
+.left h1,
+.left h2,
+.left h3 {
+  text-shadow: #000000 2px 2px 5px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Caesar Dressing', cursive;
+}
+.left h1 {
+  margin-top: 40px;
+  font-size: 70px;
+}
+.left h2 {
+}
+.left h3 {
+  color: #5eb1ff;
+}
+.left .btn-align {
+  text-align: center;
+}
+.left .footer {
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  color: #ccc;
+}
+
+
+/* right */
+.right {
+  position: relative;
+  background-image: url('bg-right.png');
+  background-color: #6d6d6d;
+  height: 100%
+}
+.right .badge {
+  margin-top: 10px;
+}
+.right .board-container {
+  width: 532px;
+}
+.right .canvas-container {
+  margin: auto auto;
   border: 10px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 0px;
 }
+.right canvas {
+  cursor: crosshair;
+  line-height: 0px;
+}
+.right canvas.dragging {
+  cursor: crosshair;
+}
+
