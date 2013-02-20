@@ -2,11 +2,8 @@
 <html>
   <head>
     <title>Conway's You Only Live Once</title>
-    <script type="text/javascript" src="vendor/jquery/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    
     <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css' />
   </head>
   <body>
@@ -35,7 +32,7 @@
             <p>Made using the force by <a target="_blank" href="https://twitter.com/jedireza">@jedireza</a></p>
             <p>See the source code on <a target="_blank" href="https://github.com/jedireza/conways-yolo/">GitHub</a></p>
             <p>Learn about <a target="_blank" href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a></p>
-            <p>Patterns by subtlepatterns.com</p>
+            <p>Backgrounds by subtlepatterns.com</p>
           </div>
       </div>
       
@@ -44,8 +41,8 @@
         <div class="board-container">
           <div class="btn-toolbar">
             <div class="btn-group">
-              <button class="btn btn-preset"><i class="icon-picture"></i> <span class="preset-selected">Presets</span></button>
-              <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+              <button class="btn btn-inverse btn-preset"><i class="icon-picture icon-white"></i> <span class="preset-selected">Presets</span></button>
+              <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <li class="nav-header">Presets</li>
                 <li><a href="#" data-name="Criss-Cross" data-preset="seed-000.png">0) Criss-Cross</a></li>
@@ -55,8 +52,8 @@
               </ul>
             </div>
             <div class="btn-group pull-right">
-              <button class="btn btn-tool"><i class="icon-pencil"></i> <span class="tool-selected">Pencil</span></button>
-              <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+              <button class="btn btn-inverse btn-tool"><i class="icon-pencil icon-white"></i> <span class="tool-selected">Pencil</span></button>
+              <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <li class="nav-header">Basic</li>
                 <li><a href="#">Pencil</a></li>
@@ -80,7 +77,8 @@
       </div>
     </div>
     
-    
+    <script type="text/javascript" src="vendor/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </body>
-  <script type="text/javascript" src="index.js"></script>
 </html>
