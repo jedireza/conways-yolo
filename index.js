@@ -121,19 +121,19 @@ var game = {
       for (var y = 0 ; y < this.width ; y++) {
         var neighborCount = this.neighbors(x, y);
         
-        //R1: any live cell with fewer than two live neighbors dies 
+        //R1: any live cell with fewer than two live neighbors dies
         if (this.get(x, y) === true && neighborCount < 2) {
           nextBoard[x][y] = false;
         }
-        //R2: Any live cell with two or three live neighbors lives on to the next generation 
+        //R2: Any live cell with two or three live neighbors lives on to the next generation
         if ((this.get(x, y) === true && neighborCount === 2) || neighborCount === 3) {
           nextBoard[x][y] = true;
         }
-        //R3: any live cell with more than three live neighbors dies 
+        //R3: any live cell with more than three live neighbors dies
         if (this.get(x, y) === true && neighborCount > 3) {
           nextBoard[x][y] = false;
         }
-        //R4: any dead cell with exactly three live neighbors becomes a live cell 
+        //R4: any dead cell with exactly three live neighbors becomes a live cell
         if (this.get(x, y) === false && neighborCount === 3) {
           nextBoard[x][y] = true;
         }
@@ -173,7 +173,6 @@ var game = {
     return count;
   },
   positionBoard: function() {
-    console.log($(window).height());
     $('.right').css({
       height: $(window).height()
     });
@@ -224,9 +223,11 @@ $('[data-preset]').click(function(e) {
   game.initialize();
 });
 
-//start the game of life
-game.initialize();
-
+//window resize handler
 $(window).resize(function(){
   game.positionBoard();
 });
+
+//start the game of life
+game.initialize();
+
